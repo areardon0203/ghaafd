@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            text-align: center; /* Center-align the content within the body */
+        }
+
+        .container {
+            display: inline-block;
+            text-align: left; /* Align the dropdown to the left within the container */
+            padding-bottom:20px;
+        }
+
+        h1{
+          color:white;
+        }
+        h2{
+          color:white;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 10px;
+            width:100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Branched Storytelling - ECE Digital Media</h1>
+        <h2>Select a Page:</h2>
+        <select id="pageSelector" onchange="loadPage()">
+            <option value="twine/Frankie.html">Frankie</option>
+            <option value="twine/Genevieve.html">Genevieve</option>
+            <option value="twine/Asher.html">Asher</option>
+            <option value="twine/Elena.html">Elena</option>
+            <option value="twine/Elise.html">Elise</option>
+            <option value="twine/Jadhiel.html">Jadhiel</option>
+            <option value="twine/Nijah.html">Nijah</option>
+            <option value="twine/Skye.html">Skye</option>
+        </select>
+    </div>
+
+    <iframe id="pageFrame" src="twine/frankie.html"></iframe>
+
+    <script>
+        function loadPage() {
+            const selector = document.getElementById('pageSelector');
+            const selectedValue = selector.value;
+            const iframe = document.getElementById('pageFrame');
+            iframe.src = selectedValue;
+        }
+    </script>
+</body>
+</html>
