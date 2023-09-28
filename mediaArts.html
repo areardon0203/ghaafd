@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Page Title</title>
+    
+    <style>
+        /* Style for the toggle buttons */
+        button {
+            padding: 10px 20px;
+            width:100%;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 1s;
+        }
+        button:hover{
+            background-color: #6b8c97;
+        }
+
+        .active-toggle{
+            background-color: #007bff; /* Change to your desired active color */
+        }
+    
+        .toggle-buttons {
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+           /* margin-bottom: 20px; /* Add spacing between buttons and dropdown */
+        }
+    
+        #content-dropdown {
+            background-color: #333;
+            width: 100%;
+            height: 50px;
+            color: white;
+        }
+    </style>    
+    
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="toggle-buttons">
+                <button type="button" id="film-toggle" class="active-toggle" onclick="changeOptions('film')">Filmmaking</button>
+                <button type="button" id="game-toggle" onclick="changeOptions('game')">Videogames</button>
+                <!--<button id="graphic-design-toggle" onclick="changeOptions('graphicDesign')">Graphic Design</button>-->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Dropdown for selecting content -->
+        <select id="content-dropdown" onchange="changeIframe()">
+            <!-- Default option -->
+            <option value="">Select an option</option>
+        </select>
+        
+        <!-- Iframe for displaying content -->
+        <iframe id="contentIframe" src="https://www.youtube.com/embed/QEpTTvVVN74" width="100%" height="600px"></iframe>
+    </main>
+
+    <!-- JavaScript for toggle buttons and dropdown -->
+    <script>
+        const filmToggle = document.getElementById('film-toggle');
+        const gameToggle = document.getElementById('game-toggle');
+        const contentDropdown = document.getElementById('content-dropdown');
+        const contentIframe = document.getElementById('contentIframe');
+
+        function changeOptions(type) {
+            // Clear existing options
+            contentDropdown.innerHTML = '';
+
+            // Populate options based on the type of content
+            if (type === 'film') {
+                addOption("Can't Handle - Jay Sway", "https://www.youtube.com/embed/QEpTTvVVN74");
+                addOption("Rocktoberfest - Tobias Eckert", "https://www.youtube.com/embed/UJ7-sv0-EY8");
+                addOption("Her Eyes Were Tainted Mirrors - Violet McCabe", "https://www.youtube.com/embed/YXgX_5Uy_WA");
+                addOption("I Am Fake - Marra Spallone", "https://www.youtube.com/embed/PvE6xGayhXI");
+            } else if (type === 'game') {
+                addOption("Spring 2023", "https://areardon0203.github.io/GameDesign2023/");
+                addOption("Spring 2022", "https://areardon0203.github.io/GameDesign2023/fundamentals23.html");
+                addOption("Fall 2022", "https://areardon0203.github.io/this_is_only_a_test/");
+            }
+
+            // Automatically select the first option in the dropdown
+            contentDropdown.selectedIndex = 0;
+
+            // Update the iframe based on the selected value
+            changeIframe();
+        }
+
+        function addOption(label, value) {
+            const option = document.createElement('option');
+            option.text = label;
+            option.value = value;
+            contentDropdown.add(option);
+        }
+
+        filmToggle.addEventListener('click', () => {
+            filmToggle.classList.add('active-toggle');
+            gameToggle.classList.remove('active-toggle');
+
+            // Set the dropdown value based on the selected toggle
+            contentDropdown.value = "https://www.youtube.com/embed/QEpTTvVVN74";
+
+            // Trigger the changeIframe function
+            changeIframe();
+        });
+
+        gameToggle.addEventListener('click', () => {
+            gameToggle.classList.add('active-toggle');
+            filmToggle.classList.remove('active-toggle');
+
+            // Set the dropdown value based on the selected toggle
+            contentDropdown.value = "https://areardon0203.github.io/GameDesign2023/";
+
+            // Trigger the changeIframe function
+            changeIframe();
+        });
+
+        function changeIframe() {
+            // Get the selected option's value from the dropdown
+            const selectedValue = contentDropdown.value;
+
+            // Update the iframe's src based on the selected value
+            contentIframe.src = selectedValue;
+        }
+    </script>
+</body>
+</html>
