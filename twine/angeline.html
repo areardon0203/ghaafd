@@ -3,76 +3,726 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>Untitled Story</title>
+<title>Adventures of...?</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 50%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0.25) 0%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Untitled Story.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Untitled Story" startnode="1" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="0DB0B5FA-197C-4428-A826-C8FA9C3FA9DA" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar tw-icon.redo {
-	display: none;
-}
-tw-sidebar tw-icon.undo {
-	display: none;
-}
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Adventures of...?.</tw-noscript></noscript></tw-story>
+<tw-storydata name="Adventures of...?" startnode="8" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="A7A6092A-A5ED-4021-A4BD-FC83B9C83E4A" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name=" Kai" tags="" position="2325,525" size="100,100">Kai uses an hammer it doesnt take long but its not short neither. You have 5 hours and 30 minutes left to get the jewel. 
 
-tw-sidebar {
-	display: none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="beginning" tags="" position="775,325" size="100,100">(set:$skeletonKey to false)
+[[Continue]] </tw-passagedata><tw-passagedata pid="2" name=" Nova " tags="" position="2200,250" size="100,100">if you chose Nova....
+You guys shoveled your way in it took hours, Now you only have an hour left  to get the jewel its up to u three to get it in time (enchant:?page,(text-colour:black)+(bg:(gradient: 211, 0,#f4ffc2,0.2519,#d9ffc2,0.5062,#adfff1,0.7802,#c5cbe7,1,#ffd6f1)))
 
-wow you woke up in a new confusing place, everything is dark ?? where are we it looks like a bedroom and you can&#39;t remember how we ended up here. lets look around and see if there is anything we can find 
+[[Continue]] </tw-passagedata><tw-passagedata pid="3" name=" Start" tags="" position="2725,550" size="100,100">$Character  you have two friends  $Friends. You guys will go on alot of adventures. Sometimes you will die........
 
-oh there is a door would it be safe to enter ?
- [[yes |Locked door]] [[no]]</tw-passagedata><tw-passagedata pid="2" name="Locked door" tags="" position="1050,500" size="100,100">(if: $skeletonKey is True)
-[
-Oh you have the key, you unlock the door. [[hallway]]
+Dont worry you can come back ( you come back here).  
+
+So are you ready? 
+
+
+
+[[ YESSSSSSS so ready]]
+[[ no not really]]
+[[ im thinking about it]] 
+</tw-passagedata><tw-passagedata pid="4" name=" Tomás " tags="" position="2325,650" size="100,100">(enchant:?page,(text-colour:black)+(bg:(gradient: 211, 0,#e5e619,0.2519,#19e619,0.5062,#1919e6,0.7802,#7f19e6,1,#e619e5)))
+
+Good choice,  He used a flame thrower you get in faster than expected. But will you last. We will see.  
+
+[[Continue]] 
+
+</tw-passagedata><tw-passagedata pid="5" name=" YESSSSSSS so ready" tags="" position="2325,950" size="100,100">(enchant:?page,(text-colour:white)+(bg:(gradient: 180, 0,#e61919,0.4775,#e68019,1,#e5e619))) 
+
+ For your first adventure you will  start out at a valcano...
+
+Wondering how you got here right. Welp that quite is easy.... You teleported over here 
+Your misson is to get the jewel out before the valcano explodes.. 
+
+[[Start the misson]] 
+[[DEAD]]</tw-passagedata><tw-passagedata pid="6" name=" im thinking about it" tags="" position="2425,850" size="100,100">Since your thinking about it well start off easy.. 
+
+$Character Your at home chilling when all of a sudden you get a call.
+
+On call: 
+
+$Character: HEY $Friends 
+
+$Friends: HEY $Character What are you doing... Wanna come with us.  
+
+End call 
+
+You&#39;re now siting on your couch. Think of if you should go... 
+
+[[ lets get partyyyyy| YESSSSSSS so ready]] 
+[[ no| no not really]]
+
+(enchant:?page,(text-colour:cyan)+(bg:(gradient: 320, 0,#7f19e6,0.4775,#1919e6,1,#e619e5)))</tw-passagedata><tw-passagedata pid="7" name=" no not really" tags="" position="2225,375" size="100,100">(text-colour:#97d8b2)[BOOOOOOOO!!! YOUR BORING :(] (enchant:?page,(bg:(gradient: 359, 0,#adfff1,0.4775,#f4ffc2,1,#d9ffc2)))
+(text-colour:#0b7285)[[DEAD]]</tw-passagedata><tw-passagedata pid="8" name="Choose your character!!!!!!" tags="" position="2775,800" size="100,100">This story will about your adventures with you friends. You can choose which character you wish to be. You can always change this option later on. 
+
+About the characters: 
+
+Tomás: Motivational, Inspiring, Caring, will give you advise ( if you want it or not) 
+
+Kai: Funny, To the point, Aggresive (at times), Mean ( only if you piss him off), lives on the wild side, favoritve saying YOLO 
+
+Nova : Very perfessional, likes to work ( but complains alot), Sweet, Smart 
+
+(link: &quot;Nova &quot;) 
+
+ [ (set: $Character to &quot;Nova&quot;) 
+ (set: $Friends to &quot;Kai, &amp; Tomás &quot;) 
+ (set:$tools to &quot;shovel&quot;) 
+ (goto: &quot; Start&quot;) 
+
 ]
 
-(else:)
-[oh the door is locked ?? we have to find a key,, maybe the key is under the [[bed]]
-]</tw-passagedata><tw-passagedata pid="3" name="bed" tags="" position="800,525" size="100,100">hmmm nothing here we have to keep searching there might be luck with the [[rug]]</tw-passagedata><tw-passagedata pid="4" name="closet" tags="" position="925,700" size="100,100">&lt;img src=&quot;https://www.kennedyhardware.com/images/P/KY-15-P.png&quot;&gt;
 
-(set:$skeletonKey to True)
+(link: &quot; KAI &quot;) 
 
-ah !! the key was here we can go back to the [[Locked door]]
+ [ (set: $Character to &quot;Kai&quot;) 
+ (set: $Friends to &quot;Nova, &amp; Tomás &quot;) 
+(set: $tools to &quot;hammer&quot;) 
+ (goto: &quot; Start&quot;) 
 
-</tw-passagedata><tw-passagedata pid="5" name="rug" tags="" position="575,625" size="100,100">no luck here maybe  we&#39;ll find something in the [[closet]]</tw-passagedata><tw-passagedata pid="6" name="hallway" tags="" position="1275,425" size="100,100">(set:$skeletonKey to false)
-
-the key broke its useless now. 
-
-great now that we&#39;re out of that creepy room lets try to find an exit, try not to make noise because something might be out there. we need to be quiet and quick with it 
-
-[[hallway 1]] [[bedroom 1]] [[bedroom 2]]</tw-passagedata><tw-passagedata pid="7" name="no" tags="" position="1050,325" size="100,100">you died because why did you not try leaving you starved to death oh well
-
-[[go back|beginning]]</tw-passagedata><tw-passagedata pid="8" name="hallway 1" tags="" position="1250,725" size="100,100">(if: $flashLight is True)
-[
-now that we have the flashlight lets get out, we&#39;ll have to go [[downstairs]]
 ]
 
-(else:)
-[the hallway is long and dim lit, there seems to be a single candle on the wall luminating the hallway.
-upon closer inspection you realize there is pictures scattering the walls they all apear to have a family in each of them, but the pictures are old and are all collecting dust non of the people in the photos you seemed to recgonize though. yet somehow you get a weird wave of nostalgia looking at these people  but you can&#39;t figure out why.
 
-further down the hallway you realize a small door sticking out of the wall, its tall and the wood is dark but its unlocked, should you enter ? 
-[[yes enter|door 2]] 
-[[no keep walking |no2]]
+(link: &quot;Tomás&quot;) 
+
+ [ (set: $Character to &quot;Tomás&quot;) 
+ (set: $Friends to &quot;Kai, &amp; Nova &quot;) 
+(set: $tools to &quot;flame thrower&quot;) 
+ (goto: &quot; Start&quot;) 
+
 ]
-</tw-passagedata><tw-passagedata pid="9" name="bedroom 1" tags="" position="1425,650" size="100,100">the bedroom is neatly made but upon further inspection there seems to be nothing valuable to take with you so might as well keep searching for the exit to get out of here
-maybe there was something valuable in the other rooms.. oh well we can&#39;t go back we need to get out of here 
+(enchant:?page,(bg:(gradient: 62, 0,#b7c0e1,0.3728,#7998a4,0.6765,#302f4d,1,#464655)))</tw-passagedata><tw-passagedata pid="9" name="DEAD" tags="" position="3100,500" size="100,100">You&#39;ve died!!!!!!
 
-[[downstairs]]</tw-passagedata><tw-passagedata pid="10" name="door 2" tags="" position="1150,875" size="100,100">(set:$flashLight to true)
+YOU RIGHT NOW
 
-the tall dark door led into a room that was a lot nicer than the one you woke up in, you decided to take a look around the room, scavenging the room you found a small flashlight its fully charged perfect! [[back to the hallway |hallway 1]]</tw-passagedata><tw-passagedata pid="11" name="no2" tags="" position="1500,875" size="100,100">(set:$flashLight to false)
+[[REBORN| Start]] 
+                              
+                              &lt;img src=&quot;https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/kharrazi/fDxLnytX-IMG20200811204553-01-01.jpeg&quot;  style=&quot;width:800px;&quot;&gt;  
+                              (enchant:?page,(text-colour:black)+(bg:red))</tw-passagedata><tw-passagedata pid="10" name="Start the misson" tags="" position="1575,975" size="100,100">So your weapons are $tools  you will use this to get the crown jewel. In order to do this you have to get passesed the stone wall. Who do you pick to do it. 
 
-hmm.. there might&#39;ve been something we could&#39;ve found usefull in that room. oh well we can&#39;t waste time going back now lets keep moving forward. looks like we have to go [[downstairs]]</tw-passagedata><tw-passagedata pid="12" name="downstairs" tags="" position="1875,1000" size="100,100">going downstairs of the house led us to another floor of the house, doesn&#39;t seem like theres an exit though. you can see a big living room, it looked like people haven&#39;t touched it in ages. the couches had long white cloth draped over them, covered in dust.
+[[ Nova ]] 
+[[ Tomás ]]
+[[ Kai]]  &#39;
 
-theres even more pictures on the wall do you want to take a closer look ?
-[[yes]]
-[[no|3]]</tw-passagedata><tw-passagedata pid="13" name="bedroom 2" tags="" position="1550,575" size="100,100">the room is messy and the only window in the place seems to be boarded up with thick screws, with some searching though you find a small handheld blade. this will possibly come in handy later so lets hold onto it for now. 
 
-right now we need to find an exit lets go [[downstairs]]</tw-passagedata><tw-passagedata pid="14" name="yes" tags="" position="1875,1125" size="100,100">you tried to examine the photos on the wall but as soon as you got close they all fell off the wall, the glass from the frames caused you to cut your leg. yikes we better get that cleaned up soon, this house is so dirty you could get that infected. best to start looking for a med kit before we keep looking for the exit. 
 
-</tw-passagedata><tw-passagedata pid="15" name="3" tags="" position="2000,1125" size="100,100">eh, i dont think we would&#39;ve gotten anything good from those pictures anyways we&#39;re wasting time looking through them</tw-passagedata></tw-storydata>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#39;j&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;jj&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;j
+&#39;j&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;jj&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;j
+&#39;jjjj&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;j
+&#39;j&#39;j&#39;
+&#39;&#39;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#39;
+&#39;j
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#39;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#39;&#39;&#39;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#39;&#39;
+&#39;
+
+
+&#39;
+&#39;
+
+
+
+&#39;
+
+
+
+
+
+&#39;&#39;
+
+&#39;
+&#39;
+&#39;
+&#39;
+&#39;
+&#39;
+&#39;
+&#39;
+&#39;
+&#39;&#39;
+
+&#39;j]\[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[\[[[[[[[[[[[[[[[[[[\[[[[[[[[[[[[[[[[[[[][\</tw-passagedata><tw-passagedata pid="11" name="welcome!!" tags="" position="2575,275" size="100,100">HELLO, Welcome to the story!!!! In this story, you will try your to get the crowned jewel. You have 7 hours, good luck. 
+
+[[Choose your character!!!!!!]] (enchant:?page,(text-colour:white)+(bg:(gradient: 171, 0.0025,#197fe6,0.5,#19e5e6,1,#197fe6)))</tw-passagedata><tw-passagedata pid="12" name="Continue" tags="" position="2625,850" size="100,100">You guys have now entered.. You see three ways to chose from. One way is a mazed but be careful along the way you will end up in pacthes or quick sand or be crushed but the moving walls... But will you know they move nope, or will you choose the jumping path where you have to jump along the broken pathway... Be aware there are piranhas in the water, or choose the path of ice (some parts are very easy to break through) 
+
+[[MAZE]]
+
+[[JUMPING PATH]]
+
+[[ICEWAY|DEAD]] </tw-passagedata><tw-passagedata pid="13" name="MAZE" tags="" position="1225,575" size="100,100">You have choose the Maze.  When you look up from the ground you see a long path full of sharp thorny bushes. Then... BOOM... the Maze breaks off into three paths. 
+
+What will you chose? 
+ 
+ 
+[[Left]]
+
+[[RIGHT]]
+
+[[STRAIGHT]]
+
+
+THE REST IS NOT DONE!!!!!!</tw-passagedata><tw-passagedata pid="14" name="JUMPING PATH" tags="" position="2425,1050" size="100,100">So you picked the jumping path.There are three different jumps you have to get through. Each one will get harder as you go.The first jump that you will go though is you will jump from block to block.
+
+[[ JUMP]]
+
+[[NO|DEAD]] 
+
+</tw-passagedata><tw-passagedata pid="15" name=" JUMP" tags="" position="2300,800" size="100,100">YAY YOU DID IT!
+Now let&#39;s do the even harder one. This time instead of just jumping from block to block, now you will have to look out for the lava that shoots out from  betewn the blocks.
+
+
+
+[[1,2,3,JUMP]]
+
+[[OH NO I&#39;VE FALLEN AND I CAN&quot;T GET UP |DEAD]]</tw-passagedata><tw-passagedata pid="16" name="1,2,3,JUMP" tags="" position="2325,1150" size="100,100"> You passed this one im surprised! I thought you would have failed but i guess not. Welp.. on to the next.
+ 
+ This time you will have piranhas swimming around you, but be careful, The piranha filled water will shoot out for sometime so make sure to not get to close.
+ 
+ [[ PASSED CAREFULLY]] 
+ 
+ [[MAyyybe this is to much|DEAD]]</tw-passagedata><tw-passagedata pid="17" name=" PASSED CAREFULLY" tags="" position="1500,1100" size="100,100"></tw-passagedata><tw-passagedata pid="18" name="Left" tags="" position="1075,825" size="100,100">YOUR [[DEAD]]  
+
+YOU died in a pit of slime 
+
+&lt;img src=&quot;data:image/jpeg;base64,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&quot;&gt;</tw-passagedata><tw-passagedata pid="19" name="RIGHT" tags="" position="1200,825" size="100,100">you chose right you made it to another section this time it only two way Right and Left. But wait who is that behind you. 
+Scary looking isnt he...
+
+welp let RUNNNNNNNN hurry choose 
+
+[[ RUNNNN RIGHT]]
+
+[[ RUNNNNN LEFT]] 
+
+&lt;img src=&quot;data:image/jpeg;base64,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&quot;&gt;  
+
+</tw-passagedata><tw-passagedata pid="20" name="STRAIGHT" tags="" position="950,825" size="100,100">you chose straight. &quot;Rumble, Rumble&quot; 
+
+Wait what that ( you look ahead) 
+
+ $Friends  &quot; WHAT&#39;S THAT&quot; 
+
+Its a BIG ASS ROCK coming stright for you..... 
+
+&quot;  $Character WATCH OUT&quot;  $Friends  yelled  but you didn&#39;t listen
+Your now (text-colour:#ffa8a8)[[DEAD]]</tw-passagedata><tw-passagedata pid="21" name=" RUNNNN RIGHT" tags="" position="1100,1000" size="100,100">You didnt go the right way!!!!!!!! 
+ITS A DEAD END 
+
+[[DEAD]]
+
+&lt;img src=&quot;https://s7.orientaltrading.com/is/image/OrientalTrading/FXBanner_808/dead-end-sign~ss71930.jpg&quot;&gt;  </tw-passagedata><tw-passagedata pid="22" name=" RUNNNNN LEFT" tags="" position="1300,1000" size="100,100">Soooo you made it to the last choose. Very short MAZE well the clown is coming after you so are you going straight or left.
+
+
+[[straight]] 
+
+[[left]]
+
+</tw-passagedata><tw-passagedata pid="23" name="straight" tags="" position="1400,1200" size="100,100"></tw-passagedata><tw-passagedata pid="24" name="left" tags="" position="1100,1200" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

@@ -3,62 +3,526 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>This New World Awaits You</title>
+<title>Johnny and the apples</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 50%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0.25) 0%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play This New World Awaits You.</tw-noscript></noscript></tw-story>
-<tw-storydata name="This New World Awaits You" startnode="1" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="69869EED-EE08-4AEC-A3C7-69B353D642BF" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="325,200" size="100,100">During nighttime, you&#39;re still sleeping. You tried to wake up, but you can&#39;t wake up. you then stop resisting and went into deep sleep.  you then slowly open your eyes an woke up in a place that is different than in your real world. you&#39;re laying down on the grass and It&#39;s stil nightime there. there&#39;s pixies and fairies floating around. some flowers are glowing in the dark. Some of the fairies are looking at you in curiosity. Do you get up and look around or you just stay where you are?
-
-[[Get up and look around]] 
-
-[[Stay where you are]] </tw-passagedata><tw-passagedata pid="2" name="Get up and look around" tags="" position="275,325" size="100,100">You decided to get up and look around at the place. It&#39;s pretty dark in this place, so you can&#39;t really see much except for the glowing pixies and the glowing plants (which are flowers flowers and mushrooms). do you go to the glowing flowers or the glowing pixies?
-
-[[Glowing Pixies]] 
-
-[[Glowing plants]] </tw-passagedata><tw-passagedata pid="3" name="Stay where you are" tags="" position="600,450" size="100,100">you decided to stay where you are staring in awe at this new world you&#39;re in. Some of the fairies decided to come up to you and ask what is your name and where did you come from. You tell them your name, but you don&#39;t know where or why you came to this new world. The fairies nod and ask do you want to stay here and let us help you retrieve your memorires or let us help you get out of this new world you&#39;re in.
-
-[[get out of this world you&#39;re in]] 
-
-[[stay here and find your memories]] </tw-passagedata><tw-passagedata pid="4" name="Glowing Pixies" tags="" position="400,700" size="100,100">you decuded to go to the glowing pixies. you can&#39;t really catch them unless you have like a net or some jar to keep them captive.  Do you try to talk to them, or stay where you are and see what happens?
-
-[[Stay around and see what happens]] 
-
-[[Try to talk to the pixies]] </tw-passagedata><tw-passagedata pid="5" name="Glowing plants" tags="" position="200,650" size="100,100">You walk into a field of glowing mushrooms and flowers. and they all have a trail that either ends your fate, or somewhere different.
-there&#39;s different kind of glowing plants
-
-[[The Glowing Bluebell]]  bluebell flowers
-
-[[The Glowing Princess]]  glowing princesses.
-
-[[Rainbow Glowing Mushroom]]  glowing mushrooms.
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Johnny and the apples.</tw-noscript></noscript></tw-story>
+<tw-storydata name="Johnny and the apples" startnode="1" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="BB39CB5E-199C-4517-8E88-C7F0D5F1168D" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="1300,50" size="100,100">&lt;style&gt;
+body {
+  background-image: url(&#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSETDsp0_PcyPdIuPY4DY0SmpfLdDz9fLw4n9sxLQ6aw&amp;s&#39;);
+}
+&lt;/style&gt;
 
 
+Johnny had three apples
+
+&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSETDsp0_PcyPdIuPY4DY0SmpfLdDz9fLw4n9sxLQ6aw&amp;s&quot;style=&quot;width:500px;float:left;padding-right:100px;&quot;&gt;
+
+[[eat the apples]]
+
+[[Don&#39;t eat the apples because you fear them]]
+</tw-passagedata><tw-passagedata pid="2" name="eat the apples" tags="" position="1025,175" size="100,100">Yum. The apples were good
+
+(Your stomach grumbles)
+
+Your still hungry
+
+[[Look for more apples]]
+
+[[ Go back home]]
+
+&lt;img src=&quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDw8PDw8VFRUVDxUPFRUPFRUPFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDg0NDisZFRkrKys3Ny0rKysrNysrNysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAMIBAwMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQcC/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDERFAQAAAAAAACigioIqooAioqCoAoCKogCiKACAACACgqKg5FRQAABQQAAAABBQBQgKACCCoIogCgCgAACgAiACgoIICKAAKmCgigKigCGKgKAgAACKAACCoIogqqAgACACgCooIoIAqIKIIAooCKiooCKgAAKIoAACoAqACCoIAAAAKigAAKgAAKAAgqKgAKAIAAAqAAAoigAAAAVKoCAKEFEQABFBQBUVA0AAAAUQBAVAAAFQAAAABBUBVAAEUAAAAAAAAAFBAADAAAARcFEFRAAAAAAAAEAAFQFUAAIAIoACAqoAAoIAqACKAAAAgoCACAAoAIAAAKACCiAqgAAAAAAAoiggCgAAqQQAFUwBEQVAABAAABQAQAAAFFEVFAAAAAAAAAVQRUQFQBagUABQRUQAFQAAAQAAABQAQVAVUUAAAAAVFBFEUUEQAAAAAAQBUAAAAAAAEAAUFRQARFEUUAAVFBFAEAUAAAAAEQQFAAAAABAAUAEBUUUAAAAAAABQAFQAAUQAAAQqRQEhQAUARYAJQAWEAABAAFIAotQEBYAJVACigEAUf/2Q==&quot;style=&quot;width:500px;float:left;padding-right:200px;&quot;&gt;
+
+(text-colour:(hsl:0,0,0,0.35))+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;fade-in-out&quot;)[[Golden weaver]]
 
 
-one of them keeps you alive. 2 of them ends your fate.
-</tw-passagedata><tw-passagedata pid="6" name="get out of this world you&#39;re in" tags="" position="625,700" size="100,100">You decided to tell the fairies that you would like to get out of this world you&#39;re in. And the fairies nod and understand your desicison. What the fairies say is that all ou need to do.. Is to go to the field of [[The Glowing Princess]]. That will gety ou out of this world your in.
 
-</tw-passagedata><tw-passagedata pid="7" name="stay here and find your memories" tags="" position="1050,825" size="100,100">You tell the fairies that you decided to stay here and try to retrieve your memories. The nod and understand your decision. You then get and decided to look around. However, it&#39;s still dark out here and the oly things are glowing are the pixies and the glowing flowers and mushrooms. Which one would you like to choose?
 
-[[Glowing plants]] 
+</tw-passagedata><tw-passagedata pid="3" name="Don&#39;t eat the apples because you fear them" tags="" position="1525,175" size="100,100">You decide to not eat the apples...your a free man now johnny...</tw-passagedata><tw-passagedata pid="4" name="Look for more apples" tags="" position="925,375" size="100,100">Woah!
 
-[[Glowing Pixies]] </tw-passagedata><tw-passagedata pid="8" name="Try to talk to the pixies" tags="" position="375,900" size="100,100">You tried to talk to the fairies telling them that you need help on the way through the darkness, but they can&#39;t hear you, and they fly away. leaving you kinda distraught. So youre only option was to look at the glowing plants.
+&lt;img src=&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1614612207/k12albemarleorg/qhg3nizj3scgtbqicbjx/shutterstock_1108321994.jpg&quot;&gt;
 
-[[Glowing plants]] </tw-passagedata><tw-passagedata pid="9" name="Stay around and see what happens" tags="" position="525,850" size="100,100">You decided to stay around with the pixies and see what happends. Few pixies come over to you and starting floating around you. They seem to like you. you appreciate that the pixies likes you and was wondering if the pixies can show you the way to the darkness. The pixies started to go to straight ahead to the rainbow glowing mushrooms. You decieded to [[follow the Pixies]]</tw-passagedata><tw-passagedata pid="10" name="The Glowing Bluebell" tags="" position="0,750" size="100,100">You decided to go to the field of glowing bluebells. While you&#39;re walking on the glowing bluebells you can&#39;t help but notice something is walking up behind you... When you look behind, nothings there. But then you suddenly get dragged by a silk wrapped around your leg. You tried to escape, but it&#39;s too late. 
+You find a golden apple. As questionable as it is to find a particular golden apple out of no where you decide wether to eat it or not.
 
-GAME OVER
+[[eat it]]
 
-[[Start]] </tw-passagedata><tw-passagedata pid="11" name="The Glowing Princess" tags="" position="300,1050" size="100,100">You go through the Glowing princesses and you started to feel sleepy... Like... Veery sleepy... As you walk, you slowly start to get more sleepy and you slowly feel weak in the knees. Then 2 minutes later... You&#39;re asleep. You felt so sleepy.. that you can&#39;t wake up in the magical world... And the real world... You&#39;re alseep.. for all eternity
+[[don&#39;t eat it]]
 
-The End.</tw-passagedata><tw-passagedata pid="12" name="Rainbow Glowing Mushroom" tags="" position="0,950" size="100,100">You walk into A Field of Glowing Rainbow Mushroooms. As you walk to the field of glowing mushrooms, You notices Some deer walking around to your left. Then some fireflies floating around you. Then.. You reach to a village. Full of different people of species and mythical creatures. Nymphs, unicorns, dragons, you name it. Well, it seems like this new adventure for you is just the beggining. This New world... Awaits you, my friend. and you... You&#39;ll have a one hell of a ride.
+</tw-passagedata><tw-passagedata pid="5" name=" Go back home" tags="" position="1125,375" size="100,100">You go back home to starve...your know well that you&#39;re not satisfied...
 
-To Be Continued</tw-passagedata><tw-passagedata pid="13" name="follow the Pixies" tags="" position="600,1050" size="100,100">You follow the pixies on the path of glowing rainbow mushrooms. You keep following them and on your way there, you notice there&#39;s a village. It&#39;s like any other village except theres Magic... And lots of mythical creatures... You look around in awe of all of the prettiest and uniqueness in this world.. You wonder... Is this the beggining of your  new journey? Who knows... but this place- no... This whole new world.. Awaits fot you.. And who are you.. to refuse this? Don&#39;t worry, my friend. Soon, your memories will be retrieved and you&#39;ll be out of this world. If that&#39;s what you want that is.
+...you never were
 
-To Be continued.. Maybe.
+&lt;img src=&quot;data:image/jpeg;base64,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&quot;&gt;</tw-passagedata><tw-passagedata pid="6" name="eat it" tags="" position="725,575" size="100,100">You take a bite out of the apple and it tastes horrendously bad   
 
-</tw-passagedata></tw-storydata>
+You start to feel dizzy as the world begins spinning around you
+
+[[You fall unconcious...]]</tw-passagedata><tw-passagedata pid="7" name="don&#39;t eat it" tags="" position="1125,575" size="100,100">You decide not to eat it and head back home...
+
+What a waste...</tw-passagedata><tw-passagedata pid="8" name="You fall unconcious..." tags="" position="625,775" size="100,100">You wake up and find yourself floating in the air...the space around is all black...
+
+(text-colour:red)[You&#39;re in a different realm]
+
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[Johnny...]]
+
+&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEEELEa8p964GoO5vlan3AlYoNldA-l1OL1A&amp;usqp=CAU&quot;&gt;
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[You shouldn&#39;t have done that...]]
+
+You can hear the voice from everywhere 
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[You shouldn&#39;t have ate the apple...my soul was trapped within the apple...now that you have eaten it... you are now my...]]
+
+(text-colour:(hsl:0,0.8039,0.5,0.15))+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[&#39;&#39;HOST&#39;&#39;] 
+
+Every fiber within your body starts to burn as you start to lose sense of yourself
+
+(text-colour:(hsl:0,0.8039,0.5,0.15))+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[&#39;&#39;YOU&#39;RE MINE&#39;&#39;]
+
+Just then as you feel the end is near you see a light in the distance 
+
+&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZwUsWT9WOfIPmyH9GTu7UU5s5i7S2dgdwtw&amp;usqp=CAU&quot;&gt;
+
+(text-colour:(hsl:240,0.8039,0.5,0.45))+(text-style:&quot;bold&quot;,&quot;blurrier&quot;,&quot;fade-in-out&quot;)[[KEEP LOOKING AT THE LIGHT!]]</tw-passagedata><tw-passagedata pid="9" name="KEEP LOOKING AT THE LIGHT!" tags="" position="625,900" size="100,100">You continue to look at the light
+
+As that happens you feel more free to move
+
+Moving towards the light you feel the mysterious presence closing in on you 
+
+(text-colour:(hsl:0,0.8039,0.5,0.15))+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[&#39;&#39;YOU CAN&#39;T ESCAPE FROM ME&#39;&#39;]
+
+You finnaly start to close in on the light
+
+[[Continue]]
+</tw-passagedata><tw-passagedata pid="10" name="Continue" tags="" position="625,1025" size="100,100">(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Ah your awake !]
+
+You open your eyes as you see two people in front of you
+
+&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-PcjR4bl6fCeOItho2yw8RnXTf2KKbEHnA&amp;usqp=CAU&quot;&gt;
+
+&lt;img src=&quot;data:image/jpeg;base64,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&quot;&gt;
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[We thought you were a goner. whew 😅]
+
+[[You question where you are]]
+
+[[You ask how long were you out]]
+</tw-passagedata><tw-passagedata pid="11" name="You question where you are" tags="" position="525,1175" size="100,100">(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[The safehaven! A realm that lies beyond all others.]
+
+Huh!? Safehaven. You start to feel like this isn&#39;t kansas anymore
+
+[[Who are you people?]]</tw-passagedata><tw-passagedata pid="12" name="You ask how long were you out" tags="" position="725,1175" size="100,100">(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[You were out for a while. Almost 2 weeks at least.]
+
+2 weeks!
+
+You suddenly begin to realize that you haven&#39;t been home in 2 weeks and people are most likely looking for you.
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Oh  don&#39;t worry that&#39;s your old life now.]
+
+Old life? You start to feel like this isn&#39;t kansas anymore
+
+[[Who are you people?]]</tw-passagedata><tw-passagedata pid="13" name="Who are you people?" tags="" position="625,1375" size="100,100">(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[My is name Dra- oh wait we can&#39;t use our real names. Just call me Drae]
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[I&#39;m Sam.]
+
+You ask what exactly are you doing here
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Well...you ate the golden apple didn&#39;t you?]
+
+You say yes but question even further what the golden apple has to do with this
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[The golden apple is a sacred treasure used to hold evil spirit within them. Granted you weren&#39;t done with the apple since only a piece of that spirit is bound to you.]
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Thankfully the safehaven opens up other realms once a piece of such a treasure has been tampered with...or in your case eaten. Oh yeah you almost made a forceful pact with the spirit so it can have you as your host.]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Now people like us deal with these kinds of things all day. Once you eat a certain number of apples you are transported here. Me and Sam have eaten over 1 million of them]
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[How many apples have you eaten?]
+
+[[3 apples]]
+
+[[I want to go home]]</tw-passagedata><tw-passagedata pid="14" name="3 apples" tags="" position="525,1575" size="100,100">(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Only three? Hm you should be fine. Take these!]
+
+(text-colour:yellow)+(text-style:&quot;smear&quot;)[You have obtained a stick(weapon)]
+
+(text-colour:yellow)+(text-style:&quot;smear&quot;)[You have obtained a trashcan(sheild)]
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Also take this]
+
+(text-colour:Orange)+(text-style:&quot;smear&quot;)[Walter white&#39;s phone number]
+
+(text-colour:Orange)+(text-style:&quot;smear&quot;)[Use it if you need to get out of a bad situation]
+
+(text-colour:Orange)+(text-style:&quot;smear&quot;)[Good luck!]
+
+[[You go and face the spirit that resides within you]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[He&#39;s good bait]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[I know. He doesn&#39;t stand a chance at all.😂]
+
+
+</tw-passagedata><tw-passagedata pid="15" name="I want to go home" tags="" position="775,1525" size="100,100">(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[It&#39;s to late for that now. You need to defeat the cursed spirit here and now.]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Use these!]
+
+(text-colour:yellow)+(text-style:&quot;smear&quot;)[You have obtained a stick(weapon)]
+
+(text-colour:yellow)+(text-style:&quot;smear&quot;)[You have obtained a trashcan(sheild)]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Also take this]
+
+(text-colour:Orange)+(text-style:&quot;smear&quot;)[Drake&#39;s hoodie]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[It might get cold]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Good luck]
+
+[[You go and face the spirit that resides within you]]</tw-passagedata><tw-passagedata pid="16" name="You go and face the spirit that resides within you" tags="" position="775,1775" size="100,100">You&#39;re back to the nightmare you woke up from
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[Johnny...]]
+
+You feel the spirit&#39;s presence again...
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[I see you came back. Do you have a death wish? No matter...]]
+
+(text-colour:(hsl:0,0.8039,0.5,0.15))+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[&#39;&#39;YOUR SOUL IS...&#39;&#39;]
+
+(text-colour:red)+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;tall&quot;,&quot;rumble&quot;)[MINE!]
+
+[[Engage in combat]]</tw-passagedata><tw-passagedata pid="17" name="Engage in combat" tags="" position="950,1875" size="100,100">(set: $healthPlayer to 50)
+(set: $bossHealth to 50)
+
+You have this much health: $healthPlayer 
+The Enemy has this much health: $bossHealth
+
+[[Attack the Boss with Stick| attackStick]]
+
+[[Attack the boss with spell | attackSpell]]</tw-passagedata><tw-passagedata pid="18" name=" attackStick" tags="" position="725,2100" size="100,100">(set: $healthPlayer to $healthPlayer - 10)
+
+You have this much health: $healthPlayer 
+The Enemy has this much health: $bossHealth
+
+Your stick broke, it wasn&#39;t a good choice.
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[Fool!]]
+
+The Enemy is preparing to attack 
+
+[[Defend with trashcan| Defend trashcan]]
+
+[[Dodge it]]</tw-passagedata><tw-passagedata pid="19" name=" attackSpell" tags="" position="1125,2075" size="100,100">(set: $bossHealth to $bossHealth - 10)
+
+You have this much health: $healthPlayer 
+The Enemy has this much health: $bossHealth
+
+Your spell was highly effect and the boss lost 10 health.
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[Impressive attack, but now you&#39;ve lost the mana you needed to cast another one.]]
+
+The Enemy is preparing to attack 
+
+[[Defend with trashcan| Defend trashcan]]
+
+[[Dodge it]]</tw-passagedata><tw-passagedata pid="20" name="Dodge it" tags="" position="625,2275" size="100,100">(set: $healthPlayer to $healthPlayer - 10)
+(set: $bossHealth to 50)
+
+You have this much health: $healthPlayer 
+The Enemy has this much health: $bossHealth 
+
+Where were you going to run?
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[My turn..]]
+
+The boss attacks once again 
+
+(set: $healthPlayer to $healthPlayer - 10)
+(set: $bossHealth to 50)
+
+You have this much health: $healthPlayer 
+The Enemy has this much health: $bossHealth 
+
+What do you do now?
+
+[[Give up]]
+
+</tw-passagedata><tw-passagedata pid="21" name=" Defend trashcan" tags="" position="900,2275" size="100,100">(set: $healthPlayer to $healthPlayer - 10)
+(set: $bossHealth to 50)
+
+You have this much health: $healthPlayer 
+The Enemy has this much health: $bossHealth 
+
+A trashcan...really😑
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[My turn..]]
+
+The boss attacks once again 
+
+(set: $healthPlayer to $healthPlayer - 10)
+(set: $bossHealth to 50)
+
+You have this much health: $healthPlayer 
+The Enemy has this much health: $bossHealth 
+
+What do you do now?
+
+[[Give up]]
+
+</tw-passagedata><tw-passagedata pid="22" name="Give up" tags="" position="775,2475" size="100,100">It&#39;s hopeless. You give yourself up to the spirit...
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[As I said...It&#39;s hopeless. Your body and will are MINE!]]
+
+[[continue..]]</tw-passagedata><tw-passagedata pid="23" name="continue.." tags="" position="775,2600" size="100,100">Back in kansas...
+
+&lt;img src=&quot;https://www.wallpaperflare.com/static/515/925/220/fantasy-art-demon-destruction-illustration-wallpaper.jpg&quot;&gt;
+
+(text-colour:red)+(text-style:&quot;bold&quot;,&quot;double-underline&quot;,&quot;smear&quot;,&quot;tall&quot;,&quot;rumble&quot;)[GAME OVER]</tw-passagedata><tw-passagedata pid="24" name="Golden weaver" tags="" position="625,325" size="100,100">&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJnPtnspBZWarQ5PrYdhVd7zkQOtMKLz6f2g&amp;usqp=CAU&quot;&gt;
+
+You found the golden weaver! It might come in handy
+
+Not for your hunger however
+
+[[Look for more apples!]]</tw-passagedata><tw-passagedata pid="25" name="Look for more apples!" tags="" position="600,475" size="100,100">Woah!
+
+&lt;img src=&quot;https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1614612207/k12albemarleorg/qhg3nizj3scgtbqicbjx/shutterstock_1108321994.jpg&quot;&gt;
+
+You find a golden apple. As questionable as it is to find a particular golden apple out of no where you decide wether to eat it or not.
+
+[[eat it!]]
+
+[[don&#39;t eat it]]</tw-passagedata><tw-passagedata pid="26" name="eat it!" tags="" position="500,650" size="100,100">You take a bite out of the apple and it tastes horrendously bad   
+
+You start to feel dizzy as the world begins spinning around you
+
+[[You fall unconcious...!]]</tw-passagedata><tw-passagedata pid="27" name="You fall unconcious...!" tags="" position="475,925" size="100,100">You wake up and find yourself floating in the air...the space around is all black...
+
+(text-colour:red)[You&#39;re in a different realm]
+
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[Johnny...]]
+
+&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEEELEa8p964GoO5vlan3AlYoNldA-l1OL1A&amp;usqp=CAU&quot;&gt;
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[You shouldn&#39;t have done that...]]
+
+You can hear the voice from everywhere 
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[You shouldn&#39;t have ate the apple...my soul was trapped within the apple...now that you have eaten it... you are now my...]]
+
+(text-colour:(hsl:0,0.8039,0.5,0.15))+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[&#39;&#39;HOST&#39;&#39;] 
+
+Every fiber within your body starts to burn as you start to lose sense of yourself
+
+(text-colour:(hsl:0,0.8039,0.5,0.15))+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[&#39;&#39;YOU&#39;RE MINE&#39;&#39;]
+
+Just then as you feel the end is near you see a light in the distance 
+
+&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZwUsWT9WOfIPmyH9GTu7UU5s5i7S2dgdwtw&amp;usqp=CAU&quot;&gt;
+
+(text-colour:(hsl:240,0.8039,0.5,0.45))+(text-style:&quot;bold&quot;,&quot;blurrier&quot;,&quot;fade-in-out&quot;)[[KEEP LOOKING AT THE LIGHT!!]]</tw-passagedata><tw-passagedata pid="28" name="KEEP LOOKING AT THE LIGHT!!" tags="" position="475,1050" size="100,100">You continue to look at the light
+
+As that happens you feel more free to move
+
+Moving towards the light you feel the mysterious presence closing in on you 
+
+(text-colour:(hsl:0,0.8039,0.5,0.15))+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[&#39;&#39;YOU CAN&#39;T ESCAPE FROM ME&#39;&#39;]
+
+You finnaly start to close in on the light
+
+[[Continue!]]
+</tw-passagedata><tw-passagedata pid="29" name="Continue!" tags="" position="425,1375" size="100,100">(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Ah your awake !]
+
+You open your eyes as you see two people in front of you
+
+&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-PcjR4bl6fCeOItho2yw8RnXTf2KKbEHnA&amp;usqp=CAU&quot;&gt;
+
+&lt;img src=&quot;data:image/jpeg;base64,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&quot;&gt;
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[We thought you were a goner. whew 😅]
+
+[[You question where you are!]]
+
+[[You ask how long were you out!]]
+</tw-passagedata><tw-passagedata pid="30" name="You question where you are!" tags="" position="300,1500" size="100,100">(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[The safehaven! A realm that lies beyond all others.]
+
+Huh!? Safehaven. You start to feel like this isn&#39;t kansas anymore
+
+[[Who are you people?!]]</tw-passagedata><tw-passagedata pid="31" name="You ask how long were you out!" tags="" position="450,1700" size="100,100">(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[You were out for a while. Almost 2 weeks at least.]
+
+2 weeks!
+
+You suddenly begin to realize that you haven&#39;t been home in 2 weeks and people are most likely looking for you.
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Oh  don&#39;t worry that&#39;s your old life now.]
+
+Old life? You start to feel like this isn&#39;t kansas anymore
+
+[[Who are you people?!]]</tw-passagedata><tw-passagedata pid="32" name="Who are you people?!" tags="" position="275,1800" size="100,100">(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[My is name Dra- oh wait we can&#39;t use our real names. Just call me Drae]
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[I&#39;m Sam.]
+
+You ask what exactly are you doing here
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Well...you ate the golden apple didn&#39;t you?]
+
+You say yes but question even further what the golden apple has to do with this
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[The golden apple is a sacred treasure used to hold evil spirit within them. Granted you weren&#39;t done with the apple since only a piece of that spirit is bound to you.]
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Thankfully the safehaven opens up other realms once a piece of such a treasure has been tampered with...or in your case eaten. Oh yeah you almost made a forceful pact with the spirit so it can have you as your host.]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Now people like us deal with these kinds of things all day. Once you eat a certain number of apples you are transported here. Me and Sam have eaten over 1 million of them]
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[How many apples have you eaten?]
+
+[[3 apples!]]
+
+[[I want to go home!]]</tw-passagedata><tw-passagedata pid="33" name="3 apples!" tags="" position="575,1850" size="100,100">(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Only three? Hm you should be fine. Take these!]
+
+(text-colour:yellow)+(text-style:&quot;smear&quot;)[You have obtained a stick(weapon)]
+
+(text-colour:yellow)+(text-style:&quot;smear&quot;)[You have obtained a trashcan(sheild)]
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Also take this]
+
+(text-colour:Orange)+(text-style:&quot;smear&quot;)[Walter white&#39;s phone number]
+
+(text-colour:Orange)+(text-style:&quot;smear&quot;)[Use it if you need to get out of a bad situation]
+
+(text-colour:Orange)+(text-style:&quot;smear&quot;)[Good luck!]
+
+[[You go and face the spirit that resides within you]]</tw-passagedata><tw-passagedata pid="34" name="I want to go home!" tags="" position="500,2050" size="100,100">(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[It&#39;s to late for that now. You need to defeat the cursed spirit here and now.]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Use these!]
+
+(text-colour:yellow)+(text-style:&quot;smear&quot;)[You have obtained a stick(weapon)]
+
+(text-colour:yellow)+(text-style:&quot;smear&quot;)[You have obtained a trashcan(sheild)]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Also take this]
+
+(text-colour:Orange)+(text-style:&quot;smear&quot;)[Drake&#39;s hoodie]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[It might get cold]
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Good luck]
+
+[[You go and face the spirit that resides within you!]]</tw-passagedata><tw-passagedata pid="35" name="You go and face the spirit that resides within you!" tags="" position="350,2250" size="100,100">You&#39;re back to the nightmare you woke up from
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[Johnny...]]
+
+You feel the spirit&#39;s presence again...
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[I see you came back. Do you have a death wish? No matter...]]
+
+(text-colour:(hsl:0,0.8039,0.5,0.15))+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[&#39;&#39;YOUR SOUL IS...&#39;&#39;]
+
+(text-colour:red)+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;tall&quot;,&quot;rumble&quot;)[MINE!]
+
+[[Engage in combat!]]</tw-passagedata><tw-passagedata pid="36" name="Engage in combat!" tags="" position="350,2500" size="100,100">(set: $healthPlayer to 50)
+(set: $bossHealth to 50)
+
+You have this much health: $healthPlayer 
+The Enemy has this much health: $bossHealth
+
+[[attack the Boss with Stick| attackStick]]
+
+[[attack the boss with spell | attackSpell]]
+
+[[Use the golden weaver| attack]]</tw-passagedata><tw-passagedata pid="37" name=" attack" tags="" position="325,2700" size="100,100">You use the golden weaver on drakes hoodie
+
+&lt;img src=&quot;&quot;&gt;
+
+You use it to repel the malovent force within
+
+(text-style:&quot;bold&quot;,&quot;mark&quot;,&quot;smear&quot;,&quot;expand&quot;)[(text-colour:(hsl:270,0.8039,0.5,0.15))+(bg:black)[NOOO]]
+
+You completly disentagrate the spirit
+
+You Win!
+
+[[Go back home]]
+
+[[Go back to the safehaven]]</tw-passagedata><tw-passagedata pid="38" name="Go back home" tags="" position="225,2850" size="100,100">You go back home to kansas. 
+
+You learn your lesson to never eat anything that looks particularly golden ever again.
+
+(text-style:&quot;bold&quot;,&quot;italic&quot;,&quot;underline&quot;,&quot;superscript&quot;,&quot;smear&quot;,&quot;expand&quot;,&quot;buoy&quot;)[THE END!]</tw-passagedata><tw-passagedata pid="39" name="Go back to the safehaven" tags="" position="475,2875" size="100,100">You go back to the safehaven to report you miraculous victory
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[I see that you came out victorious...]
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[Yeah....]
+
+[[...]]</tw-passagedata><tw-passagedata pid="40" name="..." tags="" position="475,3000" size="100,100">Something feels off
+
+(text-colour:(hsl:120,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[How unfortunate...]
+
+(text-colour:(hsl:30,0.8039,0.5,0.45))+(text-style:&quot;outline&quot;)[FOR YOU THAT IS!]
+
+[[!?]]
+</tw-passagedata><tw-passagedata pid="41" name="!?" tags="" position="475,3125" size="100,100">You fall to the ground...you feel your body weaken 
+
+(text-colour:green)+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[Fool...you should&#39;ve gone home when you got the chance to! Now you will perish!]
+
+You question the sudden betrayal
+
+(text-colour:yellow)+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;rumble&quot;)[Did you really think the safehaven was for mere mortals like you!?]
+
+(text-colour:green)+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[We said we ate over a million apples...OUR HOSTS THAT IS!]
+
+A sudden realization hits you. Those apples contained souls as well!
+
+(text-colour:yellow)+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;rumble&quot;)[Since we have full control of our hosts we can enter this so called safehaven...which will be your hell]
+
+(text-colour:green)+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;shudder&quot;)[We&#39;ve waited for so long to add another soul to our collection. Not only that, but one that has eaten a sacred treasure and lived!]
+
+(text-colour:yellow)+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;rumble&quot;)[The wait was long but we can reap the rewards now!]
+
+[[continue]]</tw-passagedata><tw-passagedata pid="42" name="continue" tags="" position="475,3250" size="100,100">&lt;img src=&quot;data:image/jpeg;base64,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&quot;style=&quot;width:500px;float:left;padding-right:200px;&quot;&gt;
+
+&lt;img src=&quot;data:image/jpeg;base64,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&quot;&gt;
+
+It&#39;s over now
+
+You should&#39;ve gone home when you had the chance...
+
+(text-colour:red)+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;sway&quot;)[GAME OVER]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
